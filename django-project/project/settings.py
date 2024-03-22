@@ -77,8 +77,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'django',
-        'USER': 'nacho',
-        'PASSWORD': '12345',
+        'USER': 'onix_manager_dba',
+        'PASSWORD': 'onix_manager_db',
         'HOST': 'localhost',
         'PORT': '6005',
     }
