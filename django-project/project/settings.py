@@ -9,8 +9,10 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+import os
+from dotenv import load_dotenv
 from pathlib import Path
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -73,14 +75,21 @@ WSGI_APPLICATION = "project.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+load_dotenv()
+
+postgres_db_name = os.getenv("DB_NAME")
+postgres_user = os.getenv("DB_USER")
+postgres_password = os.getenv("DB_PASSWORD")
+postgres_port = os.getenv("DB_PORT")
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'django',
-        'USER': 'onix_manager_dba',
-        'PASSWORD': 'onix_manager_db',
+        'NAME': postgres_db_name,
+        'USER': postgres_user,
+        'PASSWORD': postgres_password,
         'HOST': 'localhost',
-        'PORT': '6005',
+        'PORT': postgres_port
     }
 }
 
