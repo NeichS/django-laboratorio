@@ -4,4 +4,4 @@ docker/
 database/
 backups/
 
-__pycache__/
+django-project/project/__pycache__/

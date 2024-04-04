@@ -3,7 +3,7 @@
 
 Paso 1 instalar dependencias:
 
-pip install requirements.txt
+pip install -r requirements.txt
 
 pip install psycopg|| pip install psycopg-binary (probar con el primer comando y si $python manage.py makemigrations no funciona, instalar la segunda opcion)
 
