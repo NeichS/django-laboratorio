@@ -75,7 +75,11 @@ WSGI_APPLICATION = "project.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-load_dotenv()
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+dotenv_path = os.path.join(dir_path, '..', '..', '.env')
+load_dotenv(dotenv_path)
 
 postgres_db_name = os.getenv("DB_NAME")
 postgres_user = os.getenv("DB_USER")

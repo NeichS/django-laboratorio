@@ -3,3 +3,5 @@
 docker/
 database/
 backups/
+
+__pycache__/
