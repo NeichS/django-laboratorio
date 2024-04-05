@@ -5,3 +5,5 @@ database/
 backups/
 
 django-project/project/__pycache__/
+
+django-project/map/__pycache__

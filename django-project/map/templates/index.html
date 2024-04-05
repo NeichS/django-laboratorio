@@ -9,38 +9,50 @@
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
      crossorigin=""/>
 
+     <link rel="stylesheet" href="styles.css">
+
      <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
             integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
             crossorigin=""></script> 
             
-
-    
-
     <style>
-        h1 {
-            display: flex;
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
         }
+        
         #map { 
-            height: 600px;
-            width:450px;
-            filter:blur(5px);
-            
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            filter: blur(1px);
         }
-        div {
-            align-content: center;
+        
+        h1 {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+            color: white;
         }
-
-        body{
-            background-color: hsl(262, 55%, 60%);
+        
+        li {
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            z-index: 1;
         }
-
     </style>
 
 </head>
 <body>
-    <h1>Paises del mundo</h1>
-
     {% for codigo, nombre in paises_dict.items %}
         
         {% if codigo == 'AR'%}
@@ -56,7 +68,7 @@
         var map = L.map('map', {
             zoomControl: false,
             dragging: false 
-        } ).setView([-38.4161, -63.6167], 5);
+        } ).setView([20, 0], 2);
 
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
             attribution: '&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
