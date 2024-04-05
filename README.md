@@ -13,3 +13,4 @@ copiar '.env.sample' y renombrarlo a '.env'
 
 Paso 3 levantar contenedor 🐋: 
 docker compose up -d 
+
