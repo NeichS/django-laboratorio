@@ -1,24 +1,20 @@
-version: '3.9'
-name: django-postgres-lab
-
-services:
-  
-  postgres:
-    
-    image: postgres:16.2
-
-    environment:
-      - POSTGRES_DB=${DB_NAME}
-      - POSTGRES_USER=${DB_USER}
-      - POSTGRES_PASSWORD=${DB_PASSWORD}
-    
-    ports:
-      - "${DB_PORT}:5432"
-    
+version: "3.9"
+name: postgres_lab 
+services: 
+  postgres: 
+    container_name: ${CONTAINER_NAME} 
+    image: postgres:${POSTGRES_VERSION}
+    env_file: ./.env 
+    environment: 
+      - TZ=America/Argentina/Buenos_Aires
+    ports: 
+      - ${POSTGRES_PORT}:5432
     restart: always
-
-    volumes:
-      - ./docker/data:/var/lib/postgresql/data
-      - ./docker/backups:/backups
+    volumes: 
+      - ./docker/volumes/data:/var/lib/postgresql/data
+      - ./docker/volumes/backups:/backups
+    extra_hosts:
+      - host.docker.internal:host-gateway 
+  
 
 
