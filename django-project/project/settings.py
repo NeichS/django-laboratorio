@@ -40,8 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "map",
-    "landingPage"
+    "apps.map"
 ]
 
 MIDDLEWARE = [
