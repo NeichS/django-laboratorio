@@ -83,19 +83,17 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 dotenv_path = os.path.join(dir_path, '..', '..', '.env')
 load_dotenv(dotenv_path)
 
-postgres_db_name = os.getenv("DB_NAME")
-postgres_user = os.getenv("DB_USER")
-postgres_password = os.getenv("DB_PASSWORD")
-postgres_port = os.getenv("DB_PORT")
+
+
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': postgres_db_name,
-        'USER': postgres_user,
-        'PASSWORD': postgres_password,
+        'NAME': os.getenv("DB_NAME"),
+        'USER': os.getenv("DB_USER"),
+        'PASSWORD': os.getenv("DB_PASSWORD"),
         'HOST': 'localhost',
-        'PORT': postgres_port
+        'PORT': os.getenv("DB_PORT") ,
     }
 }
 
