@@ -41,7 +41,11 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "apps.map",
-    "apps.user"
+    "apps.user",
+    "apps.aep_ciudad",
+    "apps.historial",
+    "apps.vuelo",
+    
 ]
 
 MIDDLEWARE = [
