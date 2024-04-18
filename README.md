@@ -54,5 +54,23 @@
 
 
 
+## Convenciones a seguir
 
+- clases en PascalCase
+- metodos en camelCase
+- variables en snake_case
+- directorios con guion-medio 
+
+***obs***:  si es una aplicacion de django el directorio va a tener que ser con guion_bajo 
+
+
+## Creacion de aplicaciones
+
+
+- Una vez parado en el directorio apps/
+
+     ```bash
+    python ../manage.py startapp nombre_aplicacion
+    ```
+***obs***: No es necesario crear la carpeta con el nombre de la aplicacion
 

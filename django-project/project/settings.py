@@ -42,10 +42,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "apps.map",
     "apps.user",
-    "apps.aep_ciudad",
+    "apps.aeropuerto_ciudad",
     "apps.historial",
     "apps.vuelo",
-    
 ]
 
 MIDDLEWARE = [
