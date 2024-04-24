@@ -43,8 +43,8 @@ INSTALLED_APPS = [
     "apps.map",
     "apps.user",
     "apps.aeropuerto_ciudad",
-    "apps.historial",
     "apps.vuelo",
+    "apps.pasaje",
 ]
 
 MIDDLEWARE = [
