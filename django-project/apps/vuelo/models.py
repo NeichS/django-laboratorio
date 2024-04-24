@@ -10,3 +10,6 @@ class Vuelo(models.Model):
     aeropuertoSalida = models.ForeignKey(models.Aeropuerto, on_delete=models.CASCADE)
     aeropuertoDestino = models.ForeignKey(models.Aeropuerto, on_delete=models.CASCADE)
 
+    def __str__(self):
+        escala = "Tiene escala" if(self.escala) else "No tiene escala"
+        return f"Codigo: {self.codigo}, hora: {self.hora}, {escala}"
