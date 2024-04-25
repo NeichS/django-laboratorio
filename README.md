@@ -16,18 +16,6 @@
     ```bash
     pip install -r requirements.txt #instala dependencias del proyecto
 
-    pip install psycopg
-    ```
-    
-    
-
-***obs***: probar con el primer comando y si python manage.py makemigrations no funciona, instalar la segunda opcion
-
-- Segunda opcion
-    ```bash
-    pip install psycopg-binary 
-    ```
-    
 
 ## Paso 2 configurar variables de entorno 
 
