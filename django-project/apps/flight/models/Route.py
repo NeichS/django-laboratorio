@@ -1,6 +1,6 @@
 from django.db import models
-from .Flight import Flight
+from .Journey import Journey
 
 class Route(models.Model):
-    id_flight = models.ForeignKey(Flight, on_delete=models.CASCADE)
+    fk_journey = models.ForeignKey(Journey, on_delete=models.CASCADE)
     

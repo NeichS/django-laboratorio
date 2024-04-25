@@ -1,5 +1,5 @@
 from django.db import models 
-from apps.airport_city.models.Airport import Airport
+from apps.airport_city.models import Airport
 from .Route import Route
 
 

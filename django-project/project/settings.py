@@ -41,11 +41,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "apps.ticket",
     "apps.map",
     "apps.user",
     "apps.airport_city",
     "apps.flight",
-    "apps.ticket",
 ]
 
 MIDDLEWARE = [

@@ -1,5 +1,5 @@
 from django.db import models
-from apps.airport_city.models.City import City
+from .City import City
 
 class Airport(models.Model):
     name = models.CharField(max_length=100)

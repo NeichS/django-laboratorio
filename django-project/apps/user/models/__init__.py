@@ -1,2 +1,2 @@
-from .Itinerary import Itinerary
-from .Users import Users
+from . import Itinerary
+from . import User
