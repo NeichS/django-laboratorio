@@ -14,6 +14,7 @@ from dotenv import load_dotenv
 from pathlib import Path
 
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -42,9 +43,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "apps.map",
     "apps.user",
-    "apps.aeropuerto_ciudad",
-    "apps.vuelo",
-    "apps.pasaje",
+    "apps.airport_city",
+    "apps.flight",
+    "apps.ticket",
 ]
 
 MIDDLEWARE = [

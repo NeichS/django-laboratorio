@@ -1,6 +1,6 @@
 from django.db import models
 
-class Avion(models.Model):
+class Plain(models.Model):
     SIZE_CHOICES = [
         ('simple', 'Simple'),
         ('medium', 'Medium'),
