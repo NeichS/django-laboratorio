@@ -41,11 +41,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "apps.ticket",
     "apps.map",
-    "apps.user",
-    "apps.airport_city",
+    "apps.airport_management",
     "apps.flight",
+    "apps.route",
+    "apps.user",
 ]
 
 MIDDLEWARE = [
@@ -87,7 +87,6 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 dotenv_path = os.path.join(dir_path, '..', '..', '.env')
 load_dotenv(dotenv_path)
-
 
 
 
