@@ -6,4 +6,5 @@ class User (models.Model):
     last_name = models.CharField(max_length= 100)
     dni = models.CharField(max_length=10, unique=True)
     email = models.EmailField(unique=True)
+    password = models.CharField(max_length=255, null=False, default='')
 
