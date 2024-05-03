@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "apps.flight",
     "apps.route",
     "apps.user",
+    "apps.landing_page"
 ]
 
 MIDDLEWARE = [

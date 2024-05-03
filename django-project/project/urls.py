@@ -17,8 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from apps.map import views
+from apps.landing_page.views.landing_page import index
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("home/", views.index),
+    path("home/", index),
 ]
