@@ -1,3 +1,3 @@
-from . import Airport
-from . import City
+from .Airport import Airport
+from .City import City
 
