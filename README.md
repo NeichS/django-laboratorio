@@ -1,7 +1,7 @@
 
 # Git clone guide
 
-## Recomendacion (opcional)
+## Recomendación (opcional)
 
 - Es recomendable tener las dependencias del proyecto en un entorno virtual:
 
