@@ -1,6 +1,5 @@
 FROM python:latest
 
-# Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 # Python no generará archivos de byte compilado (.pyc)
 ENV PYTHONUNBUFFERED 1 
