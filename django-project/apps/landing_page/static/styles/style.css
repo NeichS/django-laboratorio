@@ -1,6 +1,4 @@
-body {
-    font-family: Arial, sans-serif;
-}
+
 
 .button {
     background-color: #4CAF50;
@@ -15,4 +13,5 @@ body {
 
 .button:hover {
     background-color: #45a049;
+    
 }
