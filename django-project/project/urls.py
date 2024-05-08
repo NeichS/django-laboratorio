@@ -23,5 +23,6 @@ from apps.user.views.User import login
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("home/", landing),
-    path("login/", login)
+    path("login/", login),
+    path("searchflight", )
 ]
