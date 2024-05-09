@@ -9,25 +9,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url("{% static 'images/mapa.png' %}");
-            background-size: 100% 100%;
-            min-height: 100vh;
-            padding: 0;
-            margin: 0;
-        }
+    <!--<style>
+        body {background-image: url("{% static 'images/mapa.png' %}");}
     </style>
+    -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script> 
+
+    
+
 
     <title>Buscar vuelos</title>
 </head>
 <body>
     
-
+    <div id="map"></div> 
     <div id="main_box">
+        <h1>Infinity Airlines</h1>
 
+        <h2>Buscar vuelos</h2>
+
+
+        <div class="contenedor-formulario">
+            <div class="formulario">
+                <label for="origen"></label>
+                <input type="text" name="origen" placeholder="Origen">
+              
+                <label for="destino"></label>
+                <input type="text" name="destino" placeholder="Destino">
+                
+                <label for="fecha">Partida</label>
+                <input type="date" name="fecha">
+
+                <label for="fecha">Regreso</label>
+                <input type="date" id="fecha-regreso" name="fecha" >
+            </div>
+            
+            <input type="submit" value="Buscar">
+        </div>
         
     </div>
+
+    <script>
+        var map = L.map('map', {
+            zoomControl: false,
+            dragging: false 
+        } ).setView([20, 0], 2.7);
+
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: '&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+            id: 'neich/clumsoq4504fq01nwam0ygy3y', // ID del estilo personalizado de Mapbox
+            accessToken: 'pk.eyJ1IjoibmVpY2giLCJhIjoiY2x1bXNhM2RsMGVvYjJpb2s0ejFieTFuYiJ9.r1EQxxeuB0em9Rr_EGsJvA' // Token de acceso de Mapbox
+        }).addTo(map);
+    </script>
+
+    
 </body>
 </html>
