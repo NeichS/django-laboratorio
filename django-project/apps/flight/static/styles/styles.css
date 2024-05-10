@@ -21,7 +21,7 @@ body {
 
 #main_box {
     width: 80vw;
-    height: 40vw;
+    height: 80vh;
     background-color: hsl(227, 42%, 83%, 0.6);
     margin-left: 10vw;
     margin-top: 5vw;
@@ -58,8 +58,6 @@ h2 {
     justify-content: center; /* Centra los elementos horizontalmente */
     margin-top: 20px;
     background-color: hsl(227, 42%, 83%);
-    padding-left: 1vw;
-    padding-right: 1vw ;
     border:2px solid hsl(262, 55%, 60%);
     flex-wrap: wrap;
     border-radius: 8px;
@@ -79,7 +77,9 @@ h2 {
 
 
 fieldset {
-    border: none;   
+    border: none;  
+    padding: 0px;
+    margin: 0px; 
 }
 legend {
     float: left;
@@ -90,8 +90,8 @@ legend {
     display: flex;
     align-items: center;
     margin: 0;
-    padding: 0;
-    border-radius: 15px;
+    padding: 5px;
+
 }
 
 .input-container:hover{
@@ -124,7 +124,7 @@ legend {
 }
 
 .formulario input[type="date"] {
-    color: hsla(0, 0%, 45%, 0.44);
+    color: #000;
 }
 
 #fecha-partida::-webkit-calendar-picker-indicator{
