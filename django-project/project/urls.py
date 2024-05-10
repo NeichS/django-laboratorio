@@ -18,10 +18,10 @@ from django.contrib import admin
 from django.urls import path
 from apps.map import views
 from apps.landing_page.views.landing_page import landing
-from apps.user.views.User import login
+from apps.user.views.User import User
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("home/", landing),
-    path("login/", login)
+    path("login/", User.login)
 ]
