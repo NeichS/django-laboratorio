@@ -19,13 +19,14 @@ from django.urls import path
 from apps.map.views import index
 from apps.landing_page.views import landing
 from apps.user.views import login
-from apps.flight.views import SearchFlight
+from apps.flight.views import SearchFlight, FlightQuery
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("home/", landing),
     path("login/", login),
     path("map/", index),
-    path("searchflight/", SearchFlight.template)
+    path("searchflight/", SearchFlight.template),
+    path("flightquery/", FlightQuery.template)
     
 ]
