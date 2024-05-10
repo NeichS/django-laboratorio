@@ -26,8 +26,9 @@ body {
     margin-left: 10vw;
     margin-top: 5vw;
     text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(8px) ;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    
 }
 
 h1 {
@@ -49,35 +50,63 @@ h2 {
     flex-direction: column; /* Coloca los elementos uno debajo del otro */
     align-items: center; /* Centra los elementos horizontalmente */
     
-    
 }
 
 .formulario {
     display: flex; /* Utiliza flexbox para disposición horizontal */
+    flex-direction: row;
     justify-content: center; /* Centra los elementos horizontalmente */
     margin-top: 20px;
     background-color: hsl(227, 42%, 83%);
     padding-left: 1vw;
     padding-right: 1vw ;
-    border:2px solid #000 ;
-    height: 4vw;
+    border:2px solid hsl(262, 55%, 60%);
     flex-wrap: wrap;
     border-radius: 8px;
     padding-left: 0;
+    
 }
+
+
 
 @media screen and (max-width: 600px) {
     .formulario {
-        flex-direction: column; /* Cambiar la dirección a columna en pantallas estrechas */
+        flex-direction: row; /* Cambiar la dirección a columna en pantallas estrechas */
         align-items: center; /* Centrar los elementos horizontalmente */
     }
 }
 
 
-.formulario label {
-    margin-right: 10px; /* Espacio entre etiqueta y campo */
-    margin-top: 12px;
+
+fieldset {
+    border: none;   
+}
+legend {
+    float: left;
     color: hsl(262, 55%, 60%);
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border-radius: 15px;
+}
+
+.input-container:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: 250ms;
+}
+
+
+.column {
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.svg-container {
+    margin-right: 10px; /* Espacio entre el SVG y el input */
 }
 
 .formulario input[type="text"],
@@ -85,21 +114,24 @@ h2 {
 .formulario select {
     padding: 5px;
     margin-right: 10px; /* Espacio entre campos */
-    background-color: hsl(227, 42%, 83%);
-    border-left: 0;
-    border-bottom: 0;
-    border-top: 0;
-    border-right: 1;
+    background-color: hsla(227, 43%, 83%, 0.938);
     outline: none;
     justify-content: center;
+    border: none;
+    height: 40px;
+    font-size: 12px;
+    margin-top: 10px;
 }
 
+.formulario input[type="date"] {
+    color: hsla(0, 0%, 45%, 0.44);
+}
 
-
-#fecha-regreso {
-    border-right: 0;
-    margin-right: 0;
-    padding-right: 0;
+#fecha-partida::-webkit-calendar-picker-indicator{
+    display: none;
+}
+#fecha-regreso::-webkit-calendar-picker-indicator {
+    display: none;
 }
 
 input[type="submit"] {
@@ -114,7 +146,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover{
     background-color: hsl(262, 55%, 60%);
-    transition: 200ms;
+    transition: 150ms;
     font-size: 29px;
 }
 
