@@ -16,27 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-<<<<<<< HEAD
 from apps.map import views
-from apps.landing_page.views.landing_page import landing
-from apps.user.views.User import User
-=======
 from apps.map.views import index
 from apps.landing_page.views import landing
-from apps.user.views import login
+from apps.user.views import User
 from apps.flight.views import SearchFlight, FlightQuery
->>>>>>> refs/remotes/origin/main
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("home/", landing),
-<<<<<<< HEAD
-    path("login/", User.login)
-=======
-    path("login/", login),
+    path("login/", User.login),
     path("map/", index),
     path("searchflight/", SearchFlight.template),
     path("flightquery/", FlightQuery.template)
     
->>>>>>> refs/remotes/origin/main
 ]
