@@ -1,10 +1,5 @@
 from django.contrib import admin
+from .models import City
 
-from .models import Flight
-
+admin.site.register(City)
 # Register your models here.
-
-admin.site.register(Flight)
-
-
-

@@ -42,9 +42,15 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "apps.map",
-    "apps.airport_management",
+    "apps.airport",
+    "apps.city",
     "apps.flight",
     "apps.route",
+    "apps.plane",
+    "apps.departure_arrival",
+    "apps.ticket",
+    "apps.flightHistory",
+    "apps.itinerary",
     "apps.user",
     "apps.landing_page"
 ]

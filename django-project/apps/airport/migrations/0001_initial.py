@@ -9,16 +9,16 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('airport', '0001_initial'),
+        ('city', '0001_initial'),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Route',
+            name='Airport',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('fk_airport_arrival', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='arrival_routes', to='airport.airport')),
-                ('fk_airport_departure', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='departure_routes', to='airport.airport')),
+                ('airport_code', models.CharField(max_length=100, unique=True)),
+                ('fk_city', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='city.city')),
             ],
         ),
     ]
