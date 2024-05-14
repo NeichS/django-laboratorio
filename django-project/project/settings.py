@@ -28,7 +28,8 @@ SECRET_KEY = "django-insecure-zt^1esqwcnrh(c564m8$k!_l-e()8l&y%b44)sno^7i9bmn!4^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0',
+                '127.0.0.1']
 
 STATIC_URL = "static/"
 
@@ -103,7 +104,7 @@ DATABASES = {
         'NAME': os.getenv("POSTGRES_DB"),
         'USER': os.getenv("POSTGRES_USER"),
         'PASSWORD': os.getenv("POSTGRES_PASSWORD"),
-        'HOST': 'localhost',
+        'HOST': 'host.docker.internal',
         'PORT': os.getenv("POSTGRES_PORT") ,
     }
 }
